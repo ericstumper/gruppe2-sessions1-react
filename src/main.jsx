@@ -13,6 +13,7 @@ import "./index.css";
 
 import Home from "./pages/Home";
 import Programs from "./pages/Programs";
+import Program from "./pages/Program";
 
 const httpLink = createHttpLink({
   uri: "https://eu-central-1.cdn.hygraph.com/content/cko4j7ro2ig7j01yz5tfzd0fi/master",
@@ -45,12 +46,16 @@ const router = createBrowserRouter([
     path: "/programs",
     element: <Programs />,
   },
+  {
+    path: "/programs/:programId",
+    element: <Program />,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <ApolloProvider client={client}>
-      <RouterProvider router={router} />
-    </ApolloProvider>
-  </React.StrictMode>
+  // <React.StrictMode>
+  <ApolloProvider client={client}>
+    <RouterProvider router={router} />
+  </ApolloProvider>
+  // </React.StrictMode>
 );

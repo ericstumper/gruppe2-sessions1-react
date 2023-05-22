@@ -24,7 +24,9 @@ function Programs() {
   return (
     <DefaultLayout>
       {data.programs.map((program, i) => (
-        <div key={`program-${i}`}>{program.name}</div>
+        <a href={`/programs/${program.id}`} key={`program-${i}`}>
+          {program.name}
+        </a>
       ))}
     </DefaultLayout>
   );
