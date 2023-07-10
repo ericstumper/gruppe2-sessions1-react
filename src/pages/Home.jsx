@@ -25,8 +25,8 @@ function Home() {
 
   return (
     <DefaultLayout>
-      <h1 color="red">Hi Name!</h1>
-      <div>Dein Workout heute</div>
+      <h1 color="green">Hi Name!</h1>
+      <div className="text-slate-800">Dein Workout heute</div>
       <div>
         <div>{name}</div>
       </div>
